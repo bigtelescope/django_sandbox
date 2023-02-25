@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }} </title>
+    <style>
+        body {text-align: center;}
+    </style>
+</head>
+<body>
+        <h2>{{ page_title }}</h2>
+        {% for record in records %}
+        <br><br>
+            <b>
+                {{ record.title }}
+            </b>
+            <br>
+                <i> {{ record.content }} </i>
+            </br>
+            <br>
+                {% if record.picture %}
+                    <p><img src="{{ record.picture.url }}"></p>
+                {% endif %}
+            </br>
+        </br></br>
+        {% endfor %}
+</body>
+</html>
