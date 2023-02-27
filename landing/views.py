@@ -6,7 +6,7 @@ from django.shortcuts import render
 def main_landing(request):
     arguments = {
         'title': 'records',
-        'page_title':  'Records Page Title',
+        'page_title':  'Database Content',
         'records': Product.objects.all()
     }
     return render(request, 'landing/draft.html', arguments)
