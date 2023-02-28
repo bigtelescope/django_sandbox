@@ -10,18 +10,18 @@
 <body>
         <h2>{{ page_title }}</h2>
         {% for record in records %}
-        <br><br>
-            <b>
-                {{ record.title }}
-            </b>
-            <br>
-                <i> {{ record.content }} </i>
-            </br>
-            <br>
-                {% if record.picture %}
+            {% if record.picture %}
+            <br><br>
+                <b>
+                    {{ record.title }}
+                </b>
+                <br>
+                    <i> {{ record.content }} </i>
+                </br>
+                <br>
                     <p><img src="{{ record.picture.url }}"></p>
-                {% endif %}
-            </br>
+                </br>
+            {% endif %}
         </br></br>
         {% endfor %}
 </body>
