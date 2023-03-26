@@ -10,3 +10,7 @@ def main_landing(request):
         'records': Product.objects.all()
     }
     return render(request, 'landing/draft.html', arguments)
+
+
+def sandbox(request):
+    return render(request, 'landing/base.html')

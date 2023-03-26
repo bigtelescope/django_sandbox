@@ -16,7 +16,14 @@
                     {{ record.title }}
                 </b>
                 <br>
-                    <i> {{ record.content }} </i>
+                    {% with record.content|length as description_length %}
+                        {% if description_length > 5 %}
+<!--                            {{ record.content|truncatechars:5 }}-->
+                            {{ record.content|slice:"5" }}...
+                        {% else %}
+                            {{ record.content }}
+                        {% endif %}
+                    {% endwith %}
                 </br>
                 <br>
                     <p><img src="{{ record.picture.url }}"></p>
