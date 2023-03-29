@@ -2,18 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     {% block css %}
-    {% endblock %}
-    {% block css1 %}
     {% endblock %}
 
     <title>{{page_title}}</title>
-
 </head>
 <body>
-    {% block header %}
-    {% endblock %}
 
+    {% include "header.html" %}
 
     <center>
         {% block content %}

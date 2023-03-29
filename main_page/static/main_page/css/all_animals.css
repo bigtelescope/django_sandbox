@@ -1,11 +1,14 @@
 img {
     height: 400px;
     width: 400px;
+    border-radius: 15px;
     }
+
 body {
     background-color: #f28bf0;
     color: #475be5;
      }
+
 .brd {
     border: 0px;
     padding: 10px 20px 10px 20px;
@@ -17,3 +20,29 @@ body {
     box-shadow: 0px 0px 6px 6px grey;
     }
 
+header {
+    height: 80px;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    align-items:center;
+    }
+nav {
+    display: flex;
+    justify-content: center;
+    }
+nav a {
+    color: #d5981b;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
+    }
+header img {
+    img-align: left;
+    height: 80px;
+    width: 80px;
+    }
+.change_color_link:hover {
+    background: #f21957;
+   }
