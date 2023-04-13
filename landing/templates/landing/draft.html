@@ -12,14 +12,16 @@
         {% for record in records %}
             {% if record.picture %}
             <br><br>
+            <div>
+                <a href="{{ record.get_absolute_url }}">
                 <b>
                     {{ record.title }}
                 </b>
                 <br>
                     {% with record.content|length as description_length %}
                         {% if description_length > 5 %}
-<!--                            {{ record.content|truncatechars:5 }}-->
-                            {{ record.content|slice:"5" }}...
+                            {{ record.content|truncatechars:5 }}
+<!--                            {{ record.content|slice:"5" }}...-->
                         {% else %}
                             {{ record.content }}
                         {% endif %}
@@ -28,6 +30,7 @@
                 <br>
                     <p><img src="{{ record.picture.url }}"></p>
                 </br>
+            </div>
             {% endif %}
         </br></br>
         {% endfor %}
